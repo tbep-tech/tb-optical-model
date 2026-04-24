@@ -779,28 +779,28 @@ if (run_example) {
 
   cat("\n")
   cat("╔══════════════════════════════════════════════════╗\n")
-  cat("║  K-spec Lee05 TB NTU — self-test                ║\n")
+  cat("║  K-spec Lee05 TB NTU — self-test                 ║\n")
   cat("╠══════════════════════════════════════════════════╣\n")
-  cat(sprintf("║  Obs: E_mm100 | 2008-08-07 | z=3 m             ║\n"))
-  cat(sprintf("║  mu0     = %.6f                              ║\n", mu0_t))
-  cat(sprintf("║  KdPAR   = %.6f  Excel: %.6f  err: %.3f%%  ║\n",
+  cat(sprintf("║  Obs: E_mm100 | 2008-08-07 | z=3 m         ║\n"))
+  cat(sprintf("║  mu0     = %.6f                          ║\n", mu0_t))
+  cat(sprintf("║  KdPAR   = %.6f  Excel: %.6f  err: %.3f%%║\n",
               kd_t["KdPAR"], xl_KdPAR, dKdPAR))
-  cat(sprintf("║  ZSD     = %.6f  Excel: %.6f  err: %.3f%%  ║\n",
+  cat(sprintf("║  ZSD     = %.6f  Excel: %.6f  err: %.3f%%║\n",
               kd_t["ZSD"],   xl_ZSD,   dZSD))
-  cat(sprintf("║  KdSD    = %.6f  Excel: %.6f              ║\n",
+  cat(sprintf("║  KdSD    = %.6f  Excel: %.6f             ║\n",
               kd_t["KdSD"],  xl_KdSD))
-  cat(sprintf("║  Kd490   = %.6f  Excel: %.6f  err: %.3f%%  ║\n",
+  cat(sprintf("║  Kd490   = %.6f  Excel: %.6f  err: %.3f%%║\n",
               kd_t["Kd490"], xl_Kd490, dKd490))
   cat("╠══════════════════════════════════════════════════╣\n")
-  cat(sprintf("║  Batch validation (139 obs): median err 0.47%%  ║\n"))
-  cat(sprintf("║  Status: %-39s║\n", status))
+  cat(sprintf("║  Batch validation (139 obs): median err 0.47%%    ║\n"))
+  cat(sprintf("║  Status: %-40s║\n", status))
   cat("╠══════════════════════════════════════════════════╣\n")
   cat("║  Functions:                                      ║\n")
   cat("║    compute_solar_mu0(year,month,day,dec_time)    ║\n")
-  cat("║    compute_Kd_spectra(CDOM440,CHLA,NTU,mu0,z)   ║\n")
+  cat("║    compute_Kd_spectra(CDOM440,CHLA,NTU,mu0,z)    ║\n")
   cat("║    decompose_absorption(CDOM440,CHLA,NTU)        ║\n")
   cat("║    batch_run(dat)                                ║\n")
-  cat("║    sensitivity_analysis(CDOM440,CHLA,NTU,mu0,z) ║\n")
+  cat("║    sensitivity_analysis(CDOM440,CHLA,NTU,mu0,z)  ║\n")
   cat("║    plot_Kd_spectrum(kd_vec)                      ║\n")
   cat("║    plot_absorption(CDOM440,CHLA,NTU)             ║\n")
   cat("║    plot_validation(output_R, output_XL)          ║\n")
