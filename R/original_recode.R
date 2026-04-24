@@ -781,8 +781,8 @@ if (run_example) {
   cat("╔══════════════════════════════════════════════════╗\n")
   cat("║  K-spec Lee05 TB NTU — self-test                 ║\n")
   cat("╠══════════════════════════════════════════════════╣\n")
-  cat(sprintf("║  Obs: E_mm100 | 2008-08-07 | z=3 m              ║\n"))
-  cat(sprintf("║  mu0     = %.6f                             ║\n", mu0_t))
+  cat(sprintf("║  Obs: E_mm100 | 2008-08-07 | z=3 m               ║\n"))
+  cat(sprintf("║  mu0     = %.6f                              ║\n", mu0_t))
   cat(sprintf("║  KdPAR   = %.6f  Excel: %.6f  err: %.3f%%║\n",
               kd_t["KdPAR"], xl_KdPAR, dKdPAR))
   cat(sprintf("║  ZSD     = %.6f  Excel: %.6f  err: %.3f%%║\n",
