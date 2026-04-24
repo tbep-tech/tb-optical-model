@@ -696,7 +696,7 @@ sensitivity_analysis <- function(CDOM440, CHLA, NTU,
 # SECTION 10 — FULL BATCH EXAMPLE  (set run_example <- TRUE to execute)
 # =============================================================================
 
-run_example <- TRUE
+run_example <- FALSE
 
 if (run_example) {
 
