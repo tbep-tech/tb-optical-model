@@ -696,11 +696,11 @@ sensitivity_analysis <- function(CDOM440, CHLA, NTU,
 # SECTION 10 — FULL BATCH EXAMPLE  (set run_example <- TRUE to execute)
 # =============================================================================
 
-run_example <- FALSE
+run_example <- TRUE
 
 if (run_example) {
 
-  xlsm_path <- "K-spec_Lee_05_TB_NTU_1p5_2_m_Save_SpecUSFTBEP2026.xlsm"
+  xlsm_path <- "./data-raw/K-spec Lee_05 TB NTU 1p5_2 m_Save_SpecUSFTBEP2026.xlsm"
 
   # ---- Read inputs -----------------------------------------------------------
   batch_data <- read_batch_data(xlsm_path)
@@ -738,7 +738,7 @@ if (run_example) {
                  "elasticity")])
 
   # ---- Save results ----------------------------------------------------------
-  write.csv(output_R, "Kspec_output_R.csv", row.names = FALSE)
+  write.csv(output_R, "./output/Kspec_output_R.csv", row.names = FALSE)
   message("Saved: Kspec_output_R.csv")
 }
 
