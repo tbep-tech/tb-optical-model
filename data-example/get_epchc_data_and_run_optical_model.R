@@ -4,18 +4,26 @@ options(repos = c(
   CRAN = 'https://cloud.r-project.org'))
 
 # install tbeptools
-install.packages('tbeptools')
+install.packages(c('tbeptools', 'tidyverse', 'here'))
 
-# load tbeptools
+
+
+# Load R libraries
 library(tbeptools)
 library(tidyverse)
+library(here)
+
+source('./R/original_recode.R')
 
 setwd("./data-example/")
 xlsx <- "RWMSpreadsheet_ThroughCurrentReportMonth.xlsx"
+
+epcall <- read_importepc(xlsx, download_latest = TRUE)
+
 epcdata <- read_importwq(xlsx, download_latest = TRUE)
 
 test_batch <- epcdata %>%
-              dplyr::filter(yr==2026) %>%
+              dplyr::filter(yr==2025) %>%
               mutate(Station_ID = epchc_station,
                      Year = yr,
                      Month = mo,
@@ -28,6 +36,7 @@ test_batch <- epcdata %>%
               select(Station_ID, Year, Month, Day, DecTime, z, CDOM440, CHLA, NTU)
 
 results <- batch_run(test_batch)
-plot_seasonal_KdPAR(unlist(results))
-plot_Kd_spectrum(unlist(results))         #Screwy plotresults here?
-plot_absorption(Unlist(results))          #Plots not working here?
+plot_seasonal_KdPAR(results)
+plot_Kd_spectrum(results[215, ])
+plot_absorption(results[215,7], results[215,8], results[215,9])
+sensitivity_analysis(results[215,7], results[215,8], results[215,9], results[215,10])

@@ -623,9 +623,9 @@ plot_validation <- function(output_R, output_XL, colour_by = NULL) {
 #'
 #' @param output_R  data.frame from batch_run() (must have Month column)
 plot_seasonal_KdPAR <- function(output_R) {
-  month_lbl <- c("1"="Jan","2"="Feb","3"="Mar","4"="Apr","5"="May","6"="Jun",
-                 "7"="Jul","8"="Aug","9"="Sep","10"="Oct","11"="Nov","12"="Dec")
-  mo <- as.character(output_R$Month)
+  month_lbl <- c("1" = "Jan", "2" ="Feb", "3" ="Mar", "4" ="Apr", "5" ="May", "6" ="Jun",
+                 "7" = "Jul", "8" ="Aug", "9" ="Sep", "10" ="Oct", "11" ="Nov", "12" ="Dec")
+  mo <- as.numeric(output_R$Month)
   boxplot(KdPAR ~ Month, data = output_R,
           names = month_lbl[sort(unique(mo))],
           xlab  = "Month", ylab = "KdPAR (m\u207b\u00b9)",
